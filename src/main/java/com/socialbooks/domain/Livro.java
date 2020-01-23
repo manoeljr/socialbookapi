@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 public class Livro {
 
@@ -21,6 +23,7 @@ public class Livro {
 	
 	private String nome;
 	
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date publicacao;
 	
 	private String editora;
